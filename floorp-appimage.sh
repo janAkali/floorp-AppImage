@@ -7,7 +7,6 @@ REPO="https://api.github.com/repos/Floorp-Projects/Floorp/releases"
 APPIMAGETOOL="https://github.com/pkgforge-dev/Anylinux-AppImages/raw/refs/heads/main/useful-tools/uruntime2appimage.sh"
 UPINFO="gh-releases-zsync|$(echo $GITHUB_REPOSITORY | tr '/' '|')|latest|*$ARCH.AppImage.zsync"
 DESKTOP="https://github.com/flathub/one.ablaze.floorp/raw/refs/heads/master/src/share/applications/one.ablaze.floorp.desktop"
-export URUNTIME_PRELOAD=1 # really needed here
 
 tarball_url=$(wget "$REPO" -O - | sed 's/[()",{} ]/\n/g' \
 	| grep -oi "https.*linux-$ARCH.tar.xz" | head -1)
