@@ -95,6 +95,8 @@ jobs:
           git push
                   
       - name: Delete Older Releases
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: dev-drprasad/delete-older-releases@v0.3.4
         with:
           keep_latest: 5
