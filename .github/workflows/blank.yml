@@ -1,6 +1,6 @@
 name: Appimage
 concurrency:
-  group: build-${{ github.ref }}
+  group: build-stable-${{ github.ref }}
   cancel-in-progress: true
 
 on:
